@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --color-brand-50: #f0f9ff;
+  --color-brand-100: #e0f2fe;
+  --color-brand-200: #bae6fd;
+  --color-brand-300: #7dd3fc;
+  --color-brand-400: #38bdf8;
+  --color-brand-500: #0ea5e9;
+  --color-brand-600: #0284c7;
+  --color-brand-700: #0369a1;
+  --color-brand-800: #075985;
+  --color-brand-900: #0c4a6e;
+  --color-brand-950: #082f49;
+
+  --color-surface-50: #f8fafc;
+  --color-surface-100: #f1f5f9;
+  --color-surface-200: #e2e8f0;
+  --color-surface-800: #1e293b;
+  --color-surface-900: #0f172a;
+  --color-surface-950: #020617;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-slate-900 antialiased dark:bg-surface-950 dark:text-slate-100;
+  }
+
+  ::selection {
+    @apply bg-brand-500/20 text-brand-900 dark:text-brand-100;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-600 via-brand-500 to-cyan-500 bg-clip-text text-transparent;
+  }
+
+  .glass {
+    @apply border border-slate-200/60 bg-white/80 backdrop-blur-md dark:border-slate-800/60 dark:bg-surface-900/80;
+  }
+
+  .section-padding {
+    @apply px-4 py-16 sm:px-6 lg:px-8 lg:py-24;
+  }
+
+  .prose-blog h2 {
+    @apply mt-10 mb-4 scroll-mt-24 text-2xl font-semibold tracking-tight text-slate-900 dark:text-white;
+  }
+
+  .prose-blog h3 {
+    @apply mt-8 mb-3 scroll-mt-24 text-xl font-semibold text-slate-900 dark:text-white;
+  }
+
+  .prose-blog p {
+    @apply mb-4 leading-relaxed text-slate-600 dark:text-slate-300;
+  }
+
+  .prose-blog ul {
+    @apply mb-4 list-disc space-y-2 pl-6 text-slate-600 dark:text-slate-300;
+  }
+
+  .prose-blog ol {
+    @apply mb-4 list-decimal space-y-2 pl-6 text-slate-600 dark:text-slate-300;
+  }
+
+  .prose-blog a {
+    @apply text-brand-600 underline-offset-2 hover:underline dark:text-brand-400;
+  }
+
+  .prose-blog blockquote {
+    @apply my-6 border-l-4 border-brand-500 pl-4 italic text-slate-700 dark:text-slate-300;
+  }
+}
