@@ -4,7 +4,7 @@ export const SITE_URL = `https://${SITE_DOMAIN}`;
 export const SITE_DESCRIPTION =
   "USA-focused business growth insights, lead generation strategies, and free tools for small businesses, agencies, and marketing professionals.";
 export const SITE_TAGLINE = "Grow smarter. Convert faster.";
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-default.png`;
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-default.svg`;
 
 export const SOCIAL_LINKS = {
   twitter: "https://twitter.com/pureflowleads",
