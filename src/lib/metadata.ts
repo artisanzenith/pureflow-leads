@@ -27,10 +27,21 @@ export function createMetadata({
   const url = `${SITE_URL}${path}`;
   const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} — Business Growth & Lead Generation`;
 
+  const keywords = [
+    "lead generation",
+    "b2b lead generation 2025",
+    "local service SEO 2025",
+    "AI marketing automation",
+    "CRM for small business",
+    "email marketing 2025",
+    "sales funnels",
+  ];
+
   return {
     title: fullTitle,
     description,
     metadataBase: new URL(SITE_URL),
+    keywords,
     alternates: { canonical: url },
     robots: noIndex ? { index: false, follow: false } : { index: true, follow: true },
     openGraph: {
